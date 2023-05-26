@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ContextConfiguration(classes = {BTransactionsApplication.class})
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PriceIntegrationTest {
+public class PriceIntegrationIT {
     @Autowired
     private MockMvc mockMvc;
 

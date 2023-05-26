@@ -22,6 +22,10 @@ Project Name is a Java-based application for managing prices.
     cd project-name
     mvn clean install
 
+#### Test application:
+
+    ./gradlew test integrationTest
+
 #### Run the application:
 
     mvn spring-boot:run

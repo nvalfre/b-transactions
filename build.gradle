@@ -31,3 +31,16 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+test {
+    exclude '**/integration/**'
+}
+
+task integrationTest(type: Test) {
+    description = 'Runs integration tests'
+    group = 'verification'
+    include '**/integration/**'
+    testLogging {
+        events 'PASSED', 'SKIPPED', 'FAILED'
+    }
+}
