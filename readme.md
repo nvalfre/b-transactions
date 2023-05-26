@@ -8,8 +8,8 @@ Project Name is a Java-based application for managing prices.
 
 ### Prerequisites
 
-    Java 8 or higher
-    Maven
+    Java 17 or higher
+    Gradle
 
 ### Getting Started
 
@@ -20,7 +20,7 @@ Project Name is a Java-based application for managing prices.
 #### Build the project:
 
     cd project-name
-    mvn clean install
+    ./gradlew clean build 
 
 #### Test application:
 
