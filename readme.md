@@ -35,6 +35,9 @@ The application will be accessible at http://localhost:8080.
 ### API Documentation
 For detailed API documentation, refer to the Swagger API Documentation.
 
+#### cUrl example
+    curl --location --request GET 'http://localhost:8080/prices?start_date=2020-06-14T00:00:00&product_id=35455&brand_id=1'
+
 ### Configuration
 You can configure the application by modifying the application.properties file.
 
