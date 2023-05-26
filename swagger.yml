@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  title: Price Management API
+  version: 1.0.0
+  description: API documentation for the Price Management System
+servers:
+  - url: http://localhost:8080
+paths:
+  /prices:
+    get:
+      summary: Retrieve price information
+      parameters:
+        - name: start_date
+          in: query
+          description: Start date of the price
+          required: true
+          schema:
+            type: string
+            format: date-time
+        - name: product_id
+          in: query
+          description: ID of the product
+          required: true
+          schema:
+            type: integer
+        - name: brand_id
+          in: query
+          description: ID of the brand
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: OK
+          content:
+        '404':
+          description: Not Found
+    components:
+      schemas:
+        PriceDTO:
+          type: object
+          properties:
+            productId:
+              type: integer
+            brandId:
+              type: integer
+            price:
+              type: number
+            startDate:
+              type: string
+              format: date-time
+            endDate:
+              type: string
+              format: date-time
