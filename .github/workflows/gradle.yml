@@ -27,4 +27,7 @@ jobs:
         run: sed -i 's/org.springframework.boot:spring-boot-gradle-plugin:.*/org.springframework.boot:spring-boot-gradle-plugin:3.1.0/' build.gradle
 
       - name: Build with Gradle
-        run: ./gradlew build --no-daemon --console plain
+        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+        with:
+            arguments: build
+
