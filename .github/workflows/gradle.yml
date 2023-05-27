@@ -24,7 +24,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Update Spring Boot Gradle plugin version
-        run: sed -i 's/spring-boot-gradle-plugin:.*/spring-boot-gradle-plugin:<spring-boot-version>/' build.gradle
-      
+        run: sed -i 's/org.springframework.boot:spring-boot-gradle-plugin:.*/org.springframework.boot:spring-boot-gradle-plugin:3.1.0/' build.gradle
+
       - name: Build with Gradle
         run: ./gradlew build --no-daemon --console plain
